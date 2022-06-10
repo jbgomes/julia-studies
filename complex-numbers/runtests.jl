@@ -4,33 +4,33 @@ include("complex-numbers.jl")
 
 @test ComplexNumber <: Number
 
-# @test ComplexNumber(0, 1)^2 == ComplexNumber(-1, 0)
+@test ComplexNumber(0, 1)^2 == ComplexNumber(-1, 0)
 
-# @testset "Arithmetic" begin
-#     @testset "Addition" begin
-#         @test ComplexNumber(1, 0) + ComplexNumber(2, 0) == ComplexNumber(3, 0)
-#         @test ComplexNumber(0, 1) + ComplexNumber(0, 2) == ComplexNumber(0, 3)
-#         @test ComplexNumber(1, 2) + ComplexNumber(3, 4) == ComplexNumber(4, 6)
-#     end
+@testset "Arithmetic" begin
+    @testset "Addition" begin
+        @test ComplexNumber(1, 0) + ComplexNumber(2, 0) == ComplexNumber(3, 0)
+        @test ComplexNumber(0, 1) + ComplexNumber(0, 2) == ComplexNumber(0, 3)
+        @test ComplexNumber(1, 2) + ComplexNumber(3, 4) == ComplexNumber(4, 6)
+    end
 
-#     @testset "Subtraction" begin
-#         @test ComplexNumber(1, 0) - ComplexNumber(2, 0) == ComplexNumber(-1, 0)
-#         @test ComplexNumber(0, 1) - ComplexNumber(0, 2) == ComplexNumber(0, -1)
-#         @test ComplexNumber(1, 2) - ComplexNumber(3, 4) == ComplexNumber(-2, -2)
-#     end
+    # @testset "Subtraction" begin
+    #     @test ComplexNumber(1, 0) - ComplexNumber(2, 0) == ComplexNumber(-1, 0)
+    #     @test ComplexNumber(0, 1) - ComplexNumber(0, 2) == ComplexNumber(0, -1)
+    #     @test ComplexNumber(1, 2) - ComplexNumber(3, 4) == ComplexNumber(-2, -2)
+    # end
 
-#     @testset "Multiplication" begin
-#         @test ComplexNumber(1, 0) * ComplexNumber(2, 0) == ComplexNumber(2, 0)
-#         @test ComplexNumber(0, 1) * ComplexNumber(0, 2) == ComplexNumber(-2, 0)
-#         @test ComplexNumber(1, 2) * ComplexNumber(3, 4) == ComplexNumber(-5, 10)
-#     end
+    @testset "Multiplication" begin
+        @test ComplexNumber(1, 0) * ComplexNumber(2, 0) == ComplexNumber(2, 0)
+        @test ComplexNumber(0, 1) * ComplexNumber(0, 2) == ComplexNumber(-2, 0)
+        @test ComplexNumber(1, 2) * ComplexNumber(3, 4) == ComplexNumber(-5, 10)
+    end
 
 #     @testset "Division" begin
 #         @test ComplexNumber(1, 0) / ComplexNumber(2, 0) == ComplexNumber(0.5, 0)
 #         @test ComplexNumber(0, 1) / ComplexNumber(0, 2) == ComplexNumber(0.5, 0)
 #         @test ComplexNumber(1, 2) / ComplexNumber(3, 4) ≈ ComplexNumber(0.44, 0.08)
 #     end
-# end
+end
 
 # @testset "Absolute value" begin
 #     @test abs(ComplexNumber(5, 0))  == 5
