@@ -13,11 +13,11 @@ include("complex-numbers.jl")
         @test ComplexNumber(1, 2) + ComplexNumber(3, 4) == ComplexNumber(4, 6)
     end
 
-    # @testset "Subtraction" begin
-    #     @test ComplexNumber(1, 0) - ComplexNumber(2, 0) == ComplexNumber(-1, 0)
-    #     @test ComplexNumber(0, 1) - ComplexNumber(0, 2) == ComplexNumber(0, -1)
-    #     @test ComplexNumber(1, 2) - ComplexNumber(3, 4) == ComplexNumber(-2, -2)
-    # end
+    @testset "Subtraction" begin
+         @test ComplexNumber(1, 0) - ComplexNumber(2, 0) == ComplexNumber(-1, 0)
+         @test ComplexNumber(0, 1) - ComplexNumber(0, 2) == ComplexNumber(0, -1)
+         @test ComplexNumber(1, 2) - ComplexNumber(3, 4) == ComplexNumber(-2, -2)
+    end
 
     @testset "Multiplication" begin
         @test ComplexNumber(1, 0) * ComplexNumber(2, 0) == ComplexNumber(2, 0)
