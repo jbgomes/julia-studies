@@ -52,11 +52,11 @@ end
     @test real(ComplexNumber(1, 2)) == 1
 end
 
-# @testset "Imaginary part" begin
-#     @test imag(ComplexNumber(1, 0)) == 0
-#     @test imag(ComplexNumber(0, 1)) == 1
-#     @test imag(ComplexNumber(1, 2)) == 2
-# end
+@testset "Imaginary part" begin
+    @test imag(ComplexNumber(1, 0)) == 0
+    @test imag(ComplexNumber(0, 1)) == 1
+    @test imag(ComplexNumber(1, 2)) == 2
+end
 
 # # Bonus A
 # @testset "Complex exponential" begin
