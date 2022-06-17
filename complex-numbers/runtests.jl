@@ -25,7 +25,7 @@ include("complex-numbers.jl")
         @test ComplexNumber(1, 2) * ComplexNumber(3, 4) == ComplexNumber(-5, 10)
     end
     
-    #=@testset "Division" begin
+   #=@testset "Division" begin
         @test ComplexNumber(1, 0) / ComplexNumber(2, 0) == ComplexNumber(0.5, 0)
         @test ComplexNumber(0, 1) / ComplexNumber(0, 2) == ComplexNumber(0.5, 0)
         @test ComplexNumber(1, 2) / ComplexNumber(3, 4) ≈ ComplexNumber(0.44, 0.08)
@@ -40,11 +40,11 @@ end
     @test abs(ComplexNumber(3, 4))  == 5
 end
 
-# @testset "Complex conjugate" begin
-#     @test conj(ComplexNumber(5, 0))  == ComplexNumber(5, 0)
-#     @test conj(ComplexNumber(0, 5))  == ComplexNumber(0, -5)
-#     @test conj(ComplexNumber(1, 1))  == ComplexNumber(1, -1)
-# end
+@testset "Complex conjugate" begin
+    @test conj(ComplexNumber(5, 0))  == ComplexNumber(5, 0)
+    @test conj(ComplexNumber(0, 5))  == ComplexNumber(0, -5)
+    @test conj(ComplexNumber(1, 1))  == ComplexNumber(1, -1)
+end
 
 # @testset "Real part" begin
 #     @test real(ComplexNumber(1, 0)) == 1
