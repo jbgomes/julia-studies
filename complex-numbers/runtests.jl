@@ -46,11 +46,11 @@ end
     @test conj(ComplexNumber(1, 1))  == ComplexNumber(1, -1)
 end
 
-# @testset "Real part" begin
-#     @test real(ComplexNumber(1, 0)) == 1
-#     @test real(ComplexNumber(0, 1)) == 0
-#     @test real(ComplexNumber(1, 2)) == 1
-# end
+@testset "Real part" begin
+    @test real(ComplexNumber(1, 0)) == 1
+    @test real(ComplexNumber(0, 1)) == 0
+    @test real(ComplexNumber(1, 2)) == 1
+end
 
 # @testset "Imaginary part" begin
 #     @test imag(ComplexNumber(1, 0)) == 0
