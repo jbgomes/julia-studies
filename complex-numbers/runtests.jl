@@ -14,9 +14,9 @@ include("complex-numbers.jl")
     end
 
     @testset "Subtraction" begin
-         @test ComplexNumber(1, 0) - ComplexNumber(2, 0) == ComplexNumber(-1, 0)
-         @test ComplexNumber(0, 1) - ComplexNumber(0, 2) == ComplexNumber(0, -1)
-         @test ComplexNumber(1, 2) - ComplexNumber(3, 4) == ComplexNumber(-2, -2)
+        @test ComplexNumber(1, 0) - ComplexNumber(2, 0) == ComplexNumber(-1, 0)
+        @test ComplexNumber(0, 1) - ComplexNumber(0, 2) == ComplexNumber(0, -1)
+        @test ComplexNumber(1, 2) - ComplexNumber(3, 4) == ComplexNumber(-2, -2)
     end
 
     @testset "Multiplication" begin
@@ -24,21 +24,21 @@ include("complex-numbers.jl")
         @test ComplexNumber(0, 1) * ComplexNumber(0, 2) == ComplexNumber(-2, 0)
         @test ComplexNumber(1, 2) * ComplexNumber(3, 4) == ComplexNumber(-5, 10)
     end
-
-#     @testset "Division" begin
-#         @test ComplexNumber(1, 0) / ComplexNumber(2, 0) == ComplexNumber(0.5, 0)
-#         @test ComplexNumber(0, 1) / ComplexNumber(0, 2) == ComplexNumber(0.5, 0)
-#         @test ComplexNumber(1, 2) / ComplexNumber(3, 4) ≈ ComplexNumber(0.44, 0.08)
-#     end
+    
+    #=@testset "Division" begin
+        @test ComplexNumber(1, 0) / ComplexNumber(2, 0) == ComplexNumber(0.5, 0)
+        @test ComplexNumber(0, 1) / ComplexNumber(0, 2) == ComplexNumber(0.5, 0)
+        @test ComplexNumber(1, 2) / ComplexNumber(3, 4) ≈ ComplexNumber(0.44, 0.08)
+    end=#
 end
 
-# @testset "Absolute value" begin
-#     @test abs(ComplexNumber(5, 0))  == 5
-#     @test abs(ComplexNumber(-5, 0)) == 5
-#     @test abs(ComplexNumber(0, 5))  == 5
-#     @test abs(ComplexNumber(0, -5)) == 5
-#     @test abs(ComplexNumber(3, 4))  == 5
-# end
+@testset "Absolute value" begin
+    @test abs(ComplexNumber(5, 0))  == 5
+    @test abs(ComplexNumber(-5, 0)) == 5
+    @test abs(ComplexNumber(0, 5))  == 5
+    @test abs(ComplexNumber(0, -5)) == 5
+    @test abs(ComplexNumber(3, 4))  == 5
+end
 
 # @testset "Complex conjugate" begin
 #     @test conj(ComplexNumber(5, 0))  == ComplexNumber(5, 0)
